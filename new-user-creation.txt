@@ -1,0 +1,11 @@
+How to create new user on ec2 instance?
+
+1. Login into ec2 instance with default ec2-user
+2. Create new user: 'sudo adduser <username>' 
+3. Switch to new user: 'sudo su -u <username>'
+4. Create .ssh dir under ~ 'mkdir .ssh'
+5. Create authorized_keys file under .ssh
+6. Create rsa keys on local computer and then copy pub key to 'authorized_keys' file under .ssh of new user on ec2 instance and save.
+7. exit from newly created user session on ec2 instance.
+
+8. Login to server 'ssh -I <path to private key of new rasa keys pairs> username@ip'
